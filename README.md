@@ -27,3 +27,23 @@ You can use your EC2 Instance ID for the `awsmetrics.host-metric-name` system pr
     {"responseHeader":{"status":0,"QTime":0},"metricsEnabled":true,"hostMetricName":"i-1234abcd","metricNamespace":"MySolrCluster"}
 
 You should now start stats appear in the CloudWatch web UI.
+
+## Optional
+
+### Per Host Metrics Included
+
+    -Dawsmetrics.per-host-metrics-included=true
+
+ * `true`: Publish all metrics a second time with a host dimension/namespace (see: `awsmetrics.single-metric-namespace`) 
+ * `false`: Do not publish host level metrics
+
+Default: `true`
+
+### Single Metric Namespace
+
+    -Dawsmetrics.single-metric-namespace=false
+
+ * `true`: Host level metrics and global metrics are put into the same namespace. Host level metrics have an additional dimension
+ * `false`: Host level metrics and global metrics are put into the different namespaces with no extra dimensions 
+
+Default: `true`
