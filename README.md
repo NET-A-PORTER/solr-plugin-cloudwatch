@@ -5,7 +5,7 @@ This plugin will publish JVM heap and thread stats to CloudWatch as described [h
 
 # Installation
 
-1) Drop [`solr-plugin-cloudwatch-0.1.jar`](http://search.maven.org/remotecontent?filepath=com/netaporter/solr-plugin-cloudwatch/0.1/solr-plugin-cloudwatch-0.1.jar) into the directory specified by the `sharedLib` in your `solr.xml`
+1) Build with `sbt assembly` and drop `target/solr-plugin-cloudwatch-assembly-0.2.jar` into the directory specified by the `sharedLib` in your `solr.xml`
 
 2) Add the following to your `solr.xml`
 
