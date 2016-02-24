@@ -20,6 +20,8 @@ class CloudWatchAdminHandler(coreContainer: CoreContainer) extends CoreAdminHand
       if (metricsEnabled) {
         res.add("hostMetricName", AwsSdkMetrics.getHostMetricName)
         res.add("metricNamespace", AwsSdkMetrics.getMetricNameSpace)
+        res.add("singleMetricNamespace", AwsSdkMetrics.isSingleMetricNamespace)
+        res.add("perHostMetricsIncluded", AwsSdkMetrics.isPerHostMetricIncluded)
       }
     } else {
       super.handleRequestBody(req, res)
